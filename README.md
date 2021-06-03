@@ -11,12 +11,14 @@ Moon Kiwon / Lee Soui / Kim Sooyeon / Jeon Jongseok
 ## 1. Introduction
  ### background
  
- ![](img/img1-1.jpg){: width="50%" height="50%"}
+ <img src="img/img1-1.jpg" width = "200" height = "250" /> <img src="img/img1-2.png" width = "400" height = "250" /> 
  
   Single-person households are households that make a living by cooking and sleeping in independent spaces alone, and according to the Ministry of Public Administration and Security's resident registration demographics, the proportion of single-person households is increasing every year from 34.9% in 2016 to 39.24% in 2020. Among them, the proportion of young people in their 20s and 30s living alone, especially for school and work, increased 1.26 times in four years from 887,000 in 2015 to 1.18 million in 2019.
   
 
   As the number of single-person households increases, more and more studies are being done on food consumption and food expenditure patterns of single-person households, and the results show that single-person households have different characteristics and consequent problems.
+
+<img src="img/img1-3.png" width = "350" height = "200" /> 
 
   1)Single-person households have shorter meal-related hours except for snacks and drinks compared to multi-person households, and irregular meal times, with the lowest breakfast rate.
 
@@ -42,12 +44,15 @@ In addition, since food habits are not formed in a short period of time, we moti
 
 ### System architecture
 
+<img src="img/img2-1.png" width = "550" height = "300" /> 
+
 ### Main Function
+
  1) Login(User information and goal of App)
 
 Choose the user's information (name, height, weight) and the purpose of using the app (weight retention, weight loss, weight gain).
 
-
+<img src="img/img2-2.png" width = "200" height = "320" /> 
 
 
 
@@ -58,7 +63,7 @@ Choose the user's information (name, height, weight) and the purpose of using th
 
 When a user takes a picture of a food or enters a picture of the food, the user recognizes the food. Food recognition uses label detection from the Google Cloud Vision API. If you don't recognize food properly with pictures, you can type the name of the food in text.
 
-
+<img src="img/img2-3.png" width = "200" height = "320" /> <img src="img/img2-4.png" width = "300" height = "200" /> 
 
 
 This is a code that uses Google cloud vision api to recognize the user-selected photos in a photo file and to read description and scores of the food labels.
@@ -101,6 +106,7 @@ for label in response.label_annotations:
 
 When a user enters food and quantity, it calculates the calories consumed by the user based on the food and amount recognized. Calories are shown to be the same as the calories consumed in the meal and the accumulated calories per day.
 
+<img src="img/img2-5.png" width = "200" height = "320" /> 
 
 This is a code that takes the name of the food and returns calories to update the total calories.
 ```
@@ -119,14 +125,14 @@ st.insert(END, '섭취 칼로리는 ' + str(totalCal) + 'kcal 입니다')
 It shows how many calories users have consumed in the past. In addition, the target calories are set differently depending on the goals set by the user when logging in, showing them as the calories consumed by the user.
 
 
+<img src="img/img2-6.png" width = "200" height = "320" /> <img src="img/img2-7.png" width = "200" height = "320" /> 
 
 
-
- 	5) Notification
+ 5) Notification
 
 It is a function that helps users not forget to input food. If there is anything that has not been registered, the notification allows the user to enter the food without forgetting it.
 
-
+<img src="img/img2-8.png" width = "200" height = "200" /> <img src="img/img2-9.png" width = "200" height = "320" /> 
 
 We build a Python GUI Application with Tkinter in this project, and this is a code that implements destroy and notification windows popping up through the “try finally” syntax.
 ```
